@@ -1,24 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
+import ListComponent from './components/listcomponent';
+import { useState } from 'react';
+import ProductContext from './context/productcontext';
+import FooterComponent from './components/footercomponent';
+import NewProductComponent from './components/newproductcomponent';
 
 function App() {
+
+  const [products,setProduct] = useState([{name: "Phone",
+                                            price: 100,
+                                            amount: 0},
+                                          {name: "Car",
+                                            price: 900, 
+                                            amount: 0},
+                                          {name: "Computer", 
+                                            price: 300,
+                                            amount: 0}]);
+
+  const contextData = {
+    products,
+    setProduct
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <ProductContext.Provider value={contextData}>
+      <div className="App">
+        <ListComponent/>
+        <FooterComponent/>
+        <NewProductComponent/>
+      </div>
+    </ProductContext.Provider>
   );
 }
 

@@ -1,38 +1,141 @@
 .App {
   text-align: center;
+  color: #354445;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Table {
+  color: #354445;
+  background-color: #E4DCCF;
+  width: 360px;
+  text-align: left;  
+  margin: 30px auto 25px auto;
+  border-collapse: collapse;
+  box-shadow: 0px 0px 10px #7d9d9c;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Table thead {
+  background-color: #7D9D9C;
+  color: #f2f2f2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Table thead th{
+  padding: 10px 15px 10px 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.Table tbody td{
+  padding: 10px 15px 10px 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Table tbody tr{
+  background-color: #f2f2f2;
+
+}
+.Table tr:nth-child(even) {background-color: #E4DCCF;}
+
+.Basket {
+  margin: 5px auto 2px auto;
+}
+
+.Basket tbody td{
+  text-align: left;
+  padding: 10px;
+}
+
+.BasketTitle {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.ButtonBasket {
+  background-color: #E4DCCF;
+  color: #354445;
+  border-radius: 30%;
+  border-style: none;
+  transition-duration: 0.3s;
+
+}
+
+.ButtonBasket:active {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+.Total {
+  padding-bottom: 10px;
+}
+
+.BuyButton {
+  padding: 7px 20px;
+  border-radius: 10%;
+  border-style: none;
+  background-color: #E4DCCF;
+  transition-duration: 0.3s;
+}
+
+.BuyButton:hover {
+  padding: 36px 24px;
+  border-radius: 50%;
+
+}
+
+.BuyButton:active {
+  background-color: #f2f2f2;
+}
+
+.RemoveButton {
+  color: #3544457f;
+  margin-left: 20px;
+  border-style: none;
+  background-color: transparent;
+}
+
+
+.AddProductButton {
+  padding: 7px 10px;
+  border-radius: 10%;
+  border-style: none;
+  background-color: #c3b9a96e;
+  transition-duration: 0.3s;
+}
+
+.AddProductButton:active {
+  background-color: #dad0c16e;
+}
+
+.NewProduct {
+  margin: 20px auto 10px auto;
+}
+
+.LabelNew {
+  margin: 10px;
+}
+
+.price {
+  width: 100px;
+}
+
+.NewProduct input {
+  padding: 4px 10px;
+  background-color: #f2f2f2;
+  border-style: none;
+}
+
+.NewProduct input:focus {
+  outline: none;
+  border-style: none;
+}
+
+.NewProduct button {
+  margin-left: 5px;
+  padding: 3px 10px;
+  border-radius: 10%;
+  border-style: none;
+  background-color: #c3b9a96e;
+  transition-duration: 0.3s;
+}
+
+.NewProduct button:active{
+  background-color: #f2f2f2;
+
 }
